@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 164px 1fr;
+}
+
+.sidebar {
+  background-color: brown;
+  grid-area: sidebar;
+  display: flex;
+  align-items: end;
+}
+
+header {
+  background-color: aquamarine;
+  grid-area: header;
+}
+
+.main {
+  background-color: chocolate;
+  grid-area: main;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /*Firefox */
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
